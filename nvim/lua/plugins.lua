@@ -63,7 +63,8 @@ packer.startup {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
         }
-
+    
+        -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
         use({
             "jose-elias-alvarez/null-ls.nvim",
             config = function()
