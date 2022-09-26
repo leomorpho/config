@@ -1,3 +1,20 @@
+# #!/usr/bin/env bash
+
+# Check that Python3 is installed
+if which python3 > /dev/null 2>&1;
+then
+    python_version=`python3 --version 2>&1 | awk '{print $2}'`
+    echo "Python version $python_version is installed."
+else
+    echo "No Python3 executable is found. Aborting script run."
+    exit
+fi
+
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install wget tmux
+
 HOME="/Users/laudibert"
 CONFIG_PATH="$HOME/.config/myconfig"
 
@@ -58,20 +75,15 @@ brew tap homebrew/cask-fonts && brew install --cask font-ubuntu-nerd-font
 brew tap homebrew/cask-fonts && brew install --cask font-victor-mono-nerd-font
 
 # Tmux
-brew install tmux
 ln -s -f $CONFIG_PATH/tmux/.tmux.conf ~/.tmux.conf
-cp $CONFIG_PATH/tmux/.tmux.conf.local ~/.tmux.conf.local
+ln -s -f $CONFIG_PATH/tmux/.tmux.conf.local ~/.tmux.conf.local
 tmux source-file ~/.tmux.conf
 
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-open'
-set -g @plugin 'tmux-plugins/tmux-yank'
+# Install Tmux TPM plugins
+$TMUX_PLUGIN_MANAGER_PATH/tpm/scripts/install_plugins.sh
 
-# Tmuxinator: Manage complex tmux sessions easily
-gem install tmuxinator
-# if you installed tmuxinator via Ruby's gem, you'll need to run the following commands to put the completion files where they'll be loaded by your shell.
-wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
-
+# Tmux: tmux session manager. built on libtmux
+brew install tmuxp
 
 # Starship Shell: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 # https://github.com/starship/starship
