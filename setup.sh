@@ -1,5 +1,8 @@
 # #!/usr/bin/env bash
 
+HOME="/Users/laudibert"
+CONFIG_PATH="$HOME/.config/myconfig"
+
 # Check that Python3 is installed
 if which python3 > /dev/null 2>&1;
 then
@@ -15,8 +18,9 @@ fi
 
 brew install wget tmux
 
-HOME="/Users/laudibert"
-CONFIG_PATH="$HOME/.config/myconfig"
+# Requirements of Mason for NVIM
+brew install julia java php composer
+curl https://sh.rustup.rs -sSf | sh
 
 ln -s "$CONFIG_PATH/nvim" "$HOME/.config/nvim"
 ln -s "$CONFIG_PATH/.zshrc" "$HOME/.zshrc"
@@ -75,14 +79,14 @@ brew tap homebrew/cask-fonts && brew install --cask font-ubuntu-nerd-font
 brew tap homebrew/cask-fonts && brew install --cask font-victor-mono-nerd-font
 
 # Tmux
-ln -s -f $CONFIG_PATH/tmux/.tmux.conf ~/.tmux.conf
-ln -s -f $CONFIG_PATH/tmux/.tmux.conf.local ~/.tmux.conf.local
+ln -s -f $CONFIG_PATH/tmux/tmux.conf ~/.tmux.conf
+ln -s -f $CONFIG_PATH/tmux/tmux.conf.local ~/.tmux.conf.local
 tmux source-file ~/.tmux.conf
 
 # Install Tmux TPM plugins
 $TMUX_PLUGIN_MANAGER_PATH/tpm/scripts/install_plugins.sh
 
-# Tmux: tmux session manager. built on libtmux
+# Tmuxp: tmux session manager. built on libtmux
 brew install tmuxp
 
 # Starship Shell: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
