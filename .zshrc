@@ -66,3 +66,5 @@ alias tt="tree"
 source "/Users/laudibert/.zshrc_zenefits"
 
 eval "$(starship init zsh)"
+
+export EDITOR="nvim"

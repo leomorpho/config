@@ -194,6 +194,14 @@ packer.startup {
         -- list to help you solve all the trouble your code is causing.
         use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
+        use {
+            "cuducos/yaml.nvim",
+            ft = {"yaml"}, -- optional
+            requires = {
+              "nvim-treesitter/nvim-treesitter",
+              "nvim-telescope/telescope.nvim" -- optional
+            },
+          }
 
     end
 }

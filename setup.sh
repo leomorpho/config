@@ -1,7 +1,8 @@
-HOME = "/Users/laudibert"
+HOME="/Users/laudibert"
+CONFIG_PATH="$HOME/.config/myconfig"
 
-ln -s "$HOME/.config/myconfig/nvim" "$HOME/.config/nvim"
-ln -s "$HOME/.config/myconfig/.zshrc" "$HOME/.zshrc"
+ln -s "$CONFIG_PATH/nvim" "$HOME/.config/nvim"
+ln -s "$CONFIG_PATH/.zshrc" "$HOME/.zshrc"
 
 # Nerd Fonts for your IDE
 # https://www.nerdfonts.com/font-downloads
@@ -58,13 +59,19 @@ brew tap homebrew/cask-fonts && brew install --cask font-victor-mono-nerd-font
 
 # Tmux
 brew install tmux
-git clone https://github.com/gpakosz/.tmux.git ~/.tmux.git
-ln -s -f ~/.tmux/.tmux.conf
-cp ~/.tmux/.tmux.conf.local ~/.tmux.conf.local
+ln -s -f $CONFIG_PATH/tmux/.tmux.conf ~/.tmux.conf
+cp $CONFIG_PATH/tmux/.tmux.conf.local ~/.tmux.conf.local
+tmux source-file ~/.tmux.conf
 
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-open'
 set -g @plugin 'tmux-plugins/tmux-yank'
+
+# Tmuxinator: Manage complex tmux sessions easily
+gem install tmuxinator
+# if you installed tmuxinator via Ruby's gem, you'll need to run the following commands to put the completion files where they'll be loaded by your shell.
+wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
+
 
 # Starship Shell: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 # https://github.com/starship/starship
