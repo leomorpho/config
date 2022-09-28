@@ -22,7 +22,6 @@ brew install julia java php composer node wget tmux bat
 curl https://sh.rustup.rs -sSf | sh
 
 ln -s "$CONFIG_PATH/nvim" "$HOME/.config/nvim"
-ln -s "$CONFIG_PATH/nvim/coc-settings.json" "$HOME/.config/nvim"
 ln -s "$CONFIG_PATH/.zshrc" "$HOME/.zshrc"
 
 # Nerd Fonts for your IDE
