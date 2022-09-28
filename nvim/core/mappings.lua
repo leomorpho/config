@@ -25,13 +25,9 @@ keymap.set("n", "<leader>q", "<cmd>x<cr>", { silent = true, desc = "quit current
 -- Quit all opened buffers
 keymap.set("n", "<leader>Q", "<cmd>qa!<cr>", { silent = true, desc = "quit nvim" })
 
-keymap.set("n", "<space>fb", ":Telescope file_browser <cr>", {noremap = true})
-
--- Find files using Telescope command-line sugar.
-keymap.set("n", "<leader>ff", ":Telescope find_files <cr>")
-keymap.set("n", "<leader>fg", ":Telescope live_grep<cr>")
-keymap.set("n", "<leader>fb", ":Telescope buffers<cr>")
-keymap.set("n", "<leader>fh", ":Telescope help_tags<cr>")
+-- Fzf
+keymap.set("n", "<leader>f", ":FzfLua <cr>")
+keymap.set("n", "<leader>ff", ":FzfLua files<cr>")
 
 -- Nvim-tree
 keymap.set("n", "<space>tt", ":NvimTreeFindFileToggle <cr>")

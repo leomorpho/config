@@ -16,13 +16,13 @@ fi
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install wget tmux
+brew install julia java php composer node wget tmux bat
 
-# Requirements of Mason for NVIM
-brew install julia java php composer
+# Install rust, used in some nvim plugins
 curl https://sh.rustup.rs -sSf | sh
 
 ln -s "$CONFIG_PATH/nvim" "$HOME/.config/nvim"
+ln -s "$CONFIG_PATH/nvim/coc-settings.json" "$HOME/.config/nvim"
 ln -s "$CONFIG_PATH/.zshrc" "$HOME/.zshrc"
 
 # Nerd Fonts for your IDE

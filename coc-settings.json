@@ -1,0 +1,7 @@
+{
+    // https://github.com/fannheyward/coc-pyright
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [],
+    "python.linting.mypyEnabled": true,
+    "pyright.organizeimports.provider": "isort"
+}

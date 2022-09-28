@@ -96,3 +96,10 @@ lua require("custom-autocmd")
 " Format YAML
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+" Automatically run :PackerCompile whenever plugins.lua is updated
+augroup packer_user_config
+  autocmd!
+  autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+augroup end
+
+autocmd FileType json syntax match Comment +\/\/.\+$+
