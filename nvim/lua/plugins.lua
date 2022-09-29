@@ -35,7 +35,9 @@ packer.startup {
 
         use { "wbthomason/packer.nvim", opt = true }
         
-        use { 'neoclide/coc.nvim', branch = 'release' }
+        use { 'neoclide/coc.nvim', branch = 'release',
+          config = [[require('config.coc-nvim')]]
+        }
 
         -- FZF: fuzzy finder
         use { 'junegunn/fzf', run = './install --bin', }
@@ -117,6 +119,9 @@ packer.startup {
 
         -- Better git commit experience
         use { "rhysd/committia.vim", opt = true, setup = [[vim.cmd('packadd committia.vim')]] }
+
+        -- Async isort plugin for Vim + Neovim
+        use 'brentyi/isort.vim'
 
     end
 }

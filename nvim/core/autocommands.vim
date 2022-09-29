@@ -1,8 +1,3 @@
-augroup black_on_save
-  autocmd!
-  autocmd BufWritePre *.py Black
-augroup end
-
 augroup term_settings
   autocmd!
   " Do not use number and relative number for terminal inside nvim
@@ -83,13 +78,6 @@ augroup LargeFile
   autocmd BufReadPre * call s:handle_large_file()
 augroup END
 
-" run Black on save
-augroup black_on_save
-  autocmd!
-  autocmd BufWritePre *.py Black
-  autocmd BufWritePre *.py Isort 
-augroup end
-
 " Load auto-command defined in Lua
 lua require("custom-autocmd")
 
@@ -103,3 +91,14 @@ augroup packer_user_config
 augroup end
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
+aug python
+  au!
+  au BufWrite *.py call CocAction('format')
+aug END
+
+augroup IsortMappings
+    autocmd!
+    autocmd FileType python nnoremap <buffer> <Leader>si :Isort<CR>
+    autocmd FileType python vnoremap <buffer> <Leader>si :Isort<CR>
+augroup END

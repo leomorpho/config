@@ -26,13 +26,15 @@ keymap.set("n", "<leader>q", "<cmd>x<cr>", { silent = true, desc = "quit current
 keymap.set("n", "<leader>Q", "<cmd>qa!<cr>", { silent = true, desc = "quit nvim" })
 
 -- Fzf
-keymap.set("n", "<leader>f", ":FzfLua <cr>")
-keymap.set("n", "<leader>ff", ":FzfLua files<cr>")
+keymap.set("n", "<space>f", ":FzfLua <cr>")
+keymap.set("n", "<space>ff", ":FzfLua files<cr>")
+keymap.set("n", "<space>fg", ":FzfLua live_grep<cr>")
 
 -- Nvim-tree
 keymap.set("n", "<space>tt", ":NvimTreeFindFileToggle <cr>")
 
--- isort
-keymap.set("n", "<leader>si", ":!isort % <cr> :!black % <cr>")
+-- Show Coc.nvim diagnostics
+keymap.set("n", "<space>ee", ":CocList diagnostics <cr>")
 
+keymap.set("n", "<leader>sz", ":source $MYVIMRC<cr>")
 

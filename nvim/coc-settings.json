@@ -1,7 +1,11 @@
 {
     // https://github.com/fannheyward/coc-pyright
+    "coc.preferences.formatOnType": true,
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": [],
     "python.linting.mypyEnabled": true,
-    "pyright.organizeimports.provider": "isort"
+    "pyright.organizeimports.provider": "isort",
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false
 }
