@@ -15,6 +15,7 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+setopt SHARE_HISTORY
 
 # Enable Ctrl-x-e to edit command line
 autoload -U edit-command-line
@@ -82,6 +83,14 @@ alias gsi='git submodule init'
 alias gss='git status -s'
 alias gst='git status'
 
+# Use a long listing format
+alias ll='ls -la'
+
+alias ls="gls --color"
+
+# Show hidden files
+alias l.='ls -d .* --color=auto'
+
 # Zsh
 alias sz="source ~/.zshrc"
 alias zshrc="nvim ~/.zshrc"
@@ -89,6 +98,11 @@ alias zshrc="nvim ~/.zshrc"
 # Search and filesystem
 alias s="history | grep"
 alias tt="tree"
+
+alias doc="nvim ~/.config/myconfig/README.md"
+alias h="history"
+
+export LS_COLORS="$(vivid generate snazzy)"
 
 # Work specific stuff, do not share so source local file
 source "/Users/laudibert/.zshrc_zenefits"

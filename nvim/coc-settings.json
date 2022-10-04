@@ -1,10 +1,14 @@
 {
     // https://github.com/fannheyward/coc-pyright
     "coc.preferences.formatOnType": true,
+
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": [],
     "python.linting.mypyEnabled": true,
+    "python.sortImports.path": "/Library/Frameworks/Python.framework/Versions/3.9/bin/isort",
+
     "pyright.organizeimports.provider": "isort",
+
     "diagnostic.checkCurrentLine": true,
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly": false

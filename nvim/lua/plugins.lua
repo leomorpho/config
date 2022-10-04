@@ -35,8 +35,8 @@ packer.startup {
 
         use { "wbthomason/packer.nvim", opt = true }
         
-        use { 'neoclide/coc.nvim', branch = 'release',
-          config = [[require('config.coc-nvim')]]
+        use { 'neoclide/coc.nvim', branch = 'release'
+          -- config = [[require('config.coc-nvim')]]
         }
 
         -- FZF: fuzzy finder
@@ -46,7 +46,7 @@ packer.startup {
             requires = { 'kyazdani42/nvim-web-devicons' }
           }
         
-        use 'nvim-treesitter/nvim-treesitter'
+        -- use 'nvim-treesitter/nvim-treesitter'
 
         -- Python indent (follows the PEP8 style): A nicer Python indentation style for vim.
         use { "Vimjas/vim-python-pep8-indent", ft = { "python" } }

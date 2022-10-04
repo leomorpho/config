@@ -26,9 +26,10 @@ keymap.set("n", "<leader>q", "<cmd>x<cr>", { silent = true, desc = "quit current
 keymap.set("n", "<leader>Q", "<cmd>qa!<cr>", { silent = true, desc = "quit nvim" })
 
 -- Fzf
-keymap.set("n", "<space>f", ":FzfLua <cr>")
-keymap.set("n", "<space>ff", ":FzfLua files<cr>")
+keymap.set("n", "<space>ff", ":FzfLua <cr>")
+keymap.set("n", "<space>f", ":FzfLua files<cr>")
 keymap.set("n", "<space>fg", ":FzfLua live_grep<cr>")
+keymap.set("n", "<space>fo", ":FzfLua oldfiles<cr>")
 
 -- Nvim-tree
 keymap.set("n", "<space>tt", ":NvimTreeFindFileToggle <cr>")

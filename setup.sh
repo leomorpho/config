@@ -16,13 +16,17 @@ fi
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install julia java php composer node wget tmux bat
+brew install julia java php composer node wget tmux bat imerge vivid
 
 # Install rust, used in some nvim plugins
 curl https://sh.rustup.rs -sSf | sh
 
 ln -s "$CONFIG_PATH/nvim" "$HOME/.config/nvim"
 ln -s "$CONFIG_PATH/.zshrc" "$HOME/.zshrc"
+
+# sharkdp/vivid: A themeable LS_COLORS generator with a rich filetype datebase
+brew install coreutils
+alias ls="gls --color"
 
 # Nerd Fonts for your IDE
 # https://www.nerdfonts.com/font-downloads
