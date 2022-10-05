@@ -1,6 +1,33 @@
 local keymap = vim.keymap
 local api = vim.api
 
+-- https://dev.to/mr_destructive/map-vimscript-keymaps-to-lua-with-a-single-function-21ip
+function key_mapper(keymaps)
+	for _, keymap in ipairs(keymaps) do
+		local mode = keymap:sub(1, 1)
+		local delimiter = " "
+		local lhs = ""
+		local rhs_parts = {}
+		local m = 0
+		local options = { noremap = true }
+		for matches in (keymap .. delimiter):gmatch("(.-)" .. delimiter) do
+			if m == 1 then
+				lhs = matches
+			end
+			if m >= 2 then
+				table.insert(rhs_parts, matches)
+			end
+			m = m + 1
+		end
+		rhs = ""
+		for _, p in ipairs(rhs_parts) do
+			rhs = rhs .. " " .. p
+		end
+		--print("vim.keymap.set(".."\'"..mode.."\'"..", ".."\'"..lhs.."\'"..", ".."\'"..rhs.."\'"..", "..vim.inspect(options)..")")
+		vim.keymap.set(mode, lhs, rhs, options)
+	end
+end
+
 -- keymap.set(mode, custom keybinds, existing keybinds, options)
 
 -- Save key strokes (now we do not need to press shift to enter command mode).
@@ -39,3 +66,14 @@ keymap.set("n", "<space>ee", ":CocList diagnostics <cr>")
 
 keymap.set("n", "<leader>sz", ":source $MYVIMRC<cr>")
 
+-- Spectre
+keymap.set("n", "<leader>S", "<cmd>lua require('spectre').open()<CR>")
+keymap.set("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>")
+keymap.set("n", "<leader>sw", "<esc>:lua require('spectre').open_visual()<CR>")
+keymap.set("n", "<leader>sw", "viw:lua require('spectre').open_file_search()<cr>")
+
+-- key_mapper({
+--     "nmap <silent> ga <Plug>(coc-codeaction-line)",
+--     "xmap <silent> ga <Plug>(coc-codeaction-selected)",
+--     "nmap <silent> gA <Plug>(coc-codeaction)",
+-- })

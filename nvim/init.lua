@@ -19,6 +19,7 @@ local core_conf_files = {
  	"options.vim", -- setting options in nvim
  	"autocommands.vim",
  	"mappings.lua",  -- all user-defined mappings
+ 	"mappings.vim",  -- all user-defined mappings
  	"plugins.vim", -- plugins and their configs
     "coc-nvim.vim",
 -- 	"colorschemes.lua", 

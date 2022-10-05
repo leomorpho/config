@@ -16,10 +16,17 @@ fi
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install julia java php composer node wget tmux bat imerge vivid
+brew install julia java php composer node wget tmux bat imerge vivid gnu-sed
 
 # Install rust, used in some nvim plugins
 curl https://sh.rustup.rs -sSf | sh
+
+# Lua support for Nvim edits
+cargo install stylua
+cargo install stylua --features lua52
+cargo install stylua --features lua53
+cargo install stylua --features lua54
+cargo install stylua --features luau
 
 ln -s "$CONFIG_PATH/nvim" "$HOME/.config/nvim"
 ln -s "$CONFIG_PATH/.zshrc" "$HOME/.zshrc"

@@ -126,6 +126,11 @@ _G.packer_plugins = {
     path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/isort.vim",
     url = "https://github.com/brentyi/isort.vim"
   },
+  ["key-menu.nvim"] = {
+    loaded = true,
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/key-menu.nvim",
+    url = "https://github.com/linty-org/key-menu.nvim"
+  },
   ["lualine.nvim"] = {
     config = { "require('config.statusline')" },
     loaded = false,
@@ -141,6 +146,11 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
+  },
+  ["nvim-spectre"] = {
+    loaded = true,
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    url = "https://github.com/windwp/nvim-spectre"
   },
   ["nvim-tree.lua"] = {
     config = { "require('config.nvim-tree')" },
@@ -158,6 +168,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["vim-flog"] = {
     commands = { "Flog" },
@@ -219,6 +234,10 @@ time([[Defining packer_plugins]], false)
 time([[Setup for committia.vim]], true)
 vim.cmd('packadd committia.vim')
 time([[Setup for committia.vim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+require('impatient')
+time([[Config for impatient.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require('config.nvim-tree')
@@ -227,10 +246,6 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-require('impatient')
-time([[Config for impatient.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

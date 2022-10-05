@@ -20,6 +20,11 @@ inoremap <silent><expr> <TAB>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <silent><expr> <Up>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Up>" :
+      \ coc#refresh()
+inoremap <expr><Down> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
@@ -155,3 +160,23 @@ if !empty($VIRTUAL_ENV)
   \   'pythonPath': '/Library/Frameworks/Python.framework/Versions/2.7/bin/python2'
   \ })
 endif
+
+" Save extensions here, they will be installed automatically on startup
+let g:coc_global_extensions = [
+      \'coc-markdownlint',
+      \'coc-highlight',
+      \'coc-go',
+      \'coc-golines',
+      \'coc-python',
+      \'coc-pydocstring',
+      \'coc-explorer',
+      \'coc-json', 
+      \'coc-git',
+      \'coc-prettier',
+      \'coc-stylua',
+      \'coc-sh',
+      \'coc-pyright',
+      \'coc-tsserver',
+      \'coc-nav',
+      \]
+

@@ -13,7 +13,9 @@ A place for me to put keybindings for reference...until I know them by heart...
 * `yaw`: yank (copy) current word regardless of where the cursor is located in the word.
 
 ## Bash/Zsh HelpDesk
+
 ### Recursively run CMD on every file in dir
+
 ```Bash
 find . -type d -exec echo "Hello, '{}'" \;
 

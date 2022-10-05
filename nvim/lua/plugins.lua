@@ -123,6 +123,10 @@ packer.startup {
         -- Async isort plugin for Vim + Neovim
         use 'brentyi/isort.vim'
 
+        -- Find the enemy and replace them with dark power.
+        use 'nvim-lua/plenary.nvim' 
+        use 'windwp/nvim-spectre'
+
     end
 }
 
