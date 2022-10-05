@@ -127,6 +127,13 @@ packer.startup {
         use 'nvim-lua/plenary.nvim' 
         use 'windwp/nvim-spectre'
 
+        -- markdown preview plugin for (neo)vim
+        use {
+            'iamcco/markdown-preview.nvim',
+            run = function() vim.fn['mkdp#util#install']() end,
+            ft = {'markdown'},
+        }
+
     end
 }
 

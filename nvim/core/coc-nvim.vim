@@ -177,6 +177,7 @@ let g:coc_global_extensions = [
       \'coc-sh',
       \'coc-pyright',
       \'coc-tsserver',
-      \'coc-nav',
+      \'coc-vimlsp',
+      \'coc-symbol-line',
       \]
 

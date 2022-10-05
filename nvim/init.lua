@@ -22,6 +22,7 @@ local core_conf_files = {
  	"mappings.vim",  -- all user-defined mappings
  	"plugins.vim", -- plugins and their configs
     "coc-nvim.vim",
+    "markdown-preview.vim",
 -- 	"colorschemes.lua", 
 }
 
