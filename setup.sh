@@ -18,7 +18,7 @@ fi
 
 brew unlink neovim
 brew install --HEAD neovim
-brew install julia java php composer node wget tmux bat git-imerge vivid gnu-sed
+brew install julia java php composer node wget tmux bat git-imerge vivid gnu-sed pre-commit
 
 # Install rust, used in some nvim plugins
 curl https://sh.rustup.rs -sSf | sh

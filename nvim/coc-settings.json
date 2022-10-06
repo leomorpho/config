@@ -5,7 +5,9 @@
 
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": [],
-  "python.linting.pylintEnabled": true,
+  //"python.linting.flake8Enabled": true,
+  "python.linting.ruffEnabled": true,
+  "python.linting.pylamaEnabled": true,
   "python.sortImports.path": "/Library/Frameworks/Python.framework/Versions/3.9/bin/isort",
 
   "pyright.organizeimports.provider": "isort",
