@@ -16,7 +16,9 @@ fi
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install julia java php composer node wget tmux bat imerge vivid gnu-sed
+brew unlink neovim
+brew install --HEAD neovim
+brew install julia java php composer node wget tmux bat git-imerge vivid gnu-sed
 
 # Install rust, used in some nvim plugins
 curl https://sh.rustup.rs -sSf | sh
