@@ -15,6 +15,12 @@
 #
 # Make sure to ignore this file in git, I add it to `.git/info/exclude` to not edit `.gitignore`.
 #
+#
+#
+#
+#
+#
+#
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
