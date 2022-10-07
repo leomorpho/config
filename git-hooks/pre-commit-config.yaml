@@ -29,14 +29,11 @@ repos:
     - id: double-quote-string-fixer
     - id: no-commit-to-branch # automatically protects main and master
     - id: pretty-format-json
--   repo: local
+-   repo: https://github.com/psf/black
+    rev: 'refs/tags/22.1.0:refs/tags/22.1.0'
     hooks:
     - id: black
-      name: black
-      entry: black
-      language: python
-      types_or: [python, pyi]
-      additional_dependencies: [black==22.1.0, click==8.0.4]
+      additional_dependencies: [click==8.0.4]
 -   repo: https://github.com/PyCQA/isort
     rev: 5.10.1
     hooks:
