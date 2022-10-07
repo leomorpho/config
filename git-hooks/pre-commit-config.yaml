@@ -13,41 +13,52 @@
 # Once you have the config file in the root of your repo, install the hook:
 #   $ pre-commit install
 #
-# Make sure to ignore this file in git, I add it to `.git/info/exclude` to not edit `.gitignore`.
-#
-#
-#
-#
-#
-#
+# If you don't want to add this file to your repo or `.gitignore`, add it to `.git/info/exclude`.
 #
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
-    -   id: check-added-large-files
-    -   id: check-ast
-    -   id: check-docstring-first
-    -   id: check-json
-    -   id: check-merge-conflict
-    -   id: check-symlinks
-    -   id: end-of-file-fixer
-    -   id: double-quote-string-fixer
-    -   id: no-commit-to-branch # automatically protects main and master
-    -   id: pretty-format-json
+    - id: check-added-large-files
+    - id: check-ast
+    - id: check-docstring-first
+    - id: check-json
+    - id: check-merge-conflict
+    - id: check-symlinks
+    - id: end-of-file-fixer
+    - id: double-quote-string-fixer
+    - id: no-commit-to-branch # automatically protects main and master
+    - id: pretty-format-json
 -   repo: local
     hooks:
-    -   id: black
-        name: black
-        entry: black
-        language: python
-        types_or: [python, pyi]
-        additional_dependencies: [black==22.1.0, click==8.0.4]
+    - id: black
+      name: black
+      entry: black
+      language: python
+      types_or: [python, pyi]
+      additional_dependencies: [black==22.1.0, click==8.0.4]
 -   repo: https://github.com/PyCQA/isort
     rev: 5.10.1
     hooks:
-    -   id: isort
+    - id: isort
 -   repo: https://github.com/asottile/add-trailing-comma
     rev: v2.3.0
     hooks:
-    -   id: add-trailing-comma
+    - id: add-trailing-comma
+-   repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0  # or specific git tag
+    hooks:
+      - id: forbid-binary # Forbid binary files from being committed
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.3.1
+    hooks:
+      - id: remove-tabs
+-   repo: https://github.com/jorisroovers/gitlint
+    rev: v0.17.0
+    hooks:
+    - id: gitlint # Checks your git commit messages for style.
+-   repo: https://github.com/PyCQA/pydocstyle
+    rev: 6.1.1
+    hooks:
+    - id: pydocstyle # Enforce Google docstring style
+      args: [--convention=google, '--add-ignore=D100,D101,D102']
