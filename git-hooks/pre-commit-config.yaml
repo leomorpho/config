@@ -1,5 +1,20 @@
-# pre-commit clean
-# pre-commit autoupdate
+# Before being able to use this hook, you will need to install `pre-commit` in your venv:
+#   $ pip install pre-commit
+#   OR
+#   $ brew install pre-commit
+#
+# Some useful commands:
+#   pre-commit clean
+#   pre-commit autoupdate
+#
+# Place this file anywhere you want, I have it in my version controlled config, 
+#   then cd into your python repo and run: 
+#   $ ln -s ~/.config/myconfig/git-hooks/pre-commit-config.yaml $(pwd)/.pre-commit-config.yaml
+# Once you have the config file in the root of your repo, install the hook:
+#   $ pre-commit install
+#
+# Make sure to ignore this file in git, I add it to `.git/info/exclude` to not edit `.gitignore`.
+#
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
@@ -26,7 +41,7 @@ repos:
     rev: 5.10.1
     hooks:
     -   id: isort
-      # -   repo: https://github.com/asottile/add-trailing-comma
-      #     rev: v2.3.0
-      #     hooks:
-      #     -   id: add-trailing-comma
+-   repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.3.0
+    hooks:
+    -   id: add-trailing-comma
