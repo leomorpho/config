@@ -23,5 +23,6 @@
       // customize filetypes to your needs
       "filetypes": ["typescript", "typescriptreact", "graphql"]
     }
-  }
+  },
+  "git.enableGutters": true
 }
