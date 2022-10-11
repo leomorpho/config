@@ -58,4 +58,4 @@ repos:
     rev: 6.1.1
     hooks:
     - id: pydocstyle # Enforce Google docstring style
-      args: [--convention=google, '--add-ignore=D100,D101,D102']
+      args: [--convention=google, '--add-ignore=D100,D101,D102,D107']
