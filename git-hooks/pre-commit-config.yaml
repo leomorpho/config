@@ -3,10 +3,6 @@
 #   OR
 #   $ brew install pre-commit
 #
-# Some useful commands:
-#   pre-commit clean
-#   pre-commit autoupdate
-#
 # Place this file anywhere you want, I have it in my version controlled config, 
 #   then cd into your python repo and run: 
 #   $ ln -s ~/.config/myconfig/git-hooks/pre-commit-config.yaml $(pwd)/.pre-commit-config.yaml
@@ -59,3 +55,8 @@ repos:
     hooks:
     - id: pydocstyle # Enforce Google docstring style
       args: [--convention=google, '--add-ignore=D100,D101,D102,D107']
+        # NOT CURRENTLY WORKING BECAUSE OF MISSING CONFIG
+        #-   repo: https://github.com/necaris/pre-commit-pyright
+        #    rev: '1.1.53'
+        #    hooks:
+        #    -   id: pyright
