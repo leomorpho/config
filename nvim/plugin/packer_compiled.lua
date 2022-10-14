@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/leoaudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/leoaudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/leoaudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/leoaudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/leoaudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/laudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/laudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/laudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/laudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/laudibert/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,54 +76,54 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["coc.nvim"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
   ["colorbuddy.nvim"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
   ["committia.vim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/committia.vim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/committia.vim",
     url = "https://github.com/rhysd/committia.vim"
   },
   ["django-plus.vim"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/django-plus.vim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/django-plus.vim",
     url = "https://github.com/tweekmonster/django-plus.vim"
   },
   fzf = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/fzf",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
   ["fzf-lua"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/fzf-lua",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   gloombuddy = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/gloombuddy",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/gloombuddy",
     url = "https://github.com/bkegley/gloombuddy"
   },
   ["impatient.nvim"] = {
     config = { "require('impatient')" },
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["isort.vim"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/isort.vim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/isort.vim",
     url = "https://github.com/brentyi/isort.vim"
   },
   ["lualine.nvim"] = {
@@ -131,14 +131,14 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["neoscroll.nvim"] = {
@@ -146,34 +146,34 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/neoscroll.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nvim-spectre"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/nvim-spectre",
     url = "https://github.com/windwp/nvim-spectre"
   },
   ["nvim-tree.lua"] = {
     config = { "require('config.nvim-tree')" },
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/packer.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["vim-flog"] = {
@@ -181,38 +181,43 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/vim-flog",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/vim-flog",
     url = "https://github.com/rbong/vim-flog"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-obsession"] = {
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/vim-obsession",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/vim-obsession",
     url = "https://github.com/tpope/vim-obsession"
   },
   ["vim-python-pep8-indent"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/vim-python-pep8-indent",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/vim-python-pep8-indent",
     url = "https://github.com/Vimjas/vim-python-pep8-indent"
   },
   ["vim-pythonsense"] = {
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/vim-pythonsense",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/vim-pythonsense",
     url = "https://github.com/jeetsukumaran/vim-pythonsense"
+  },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    url = "https://github.com/tpope/vim-rhubarb"
   },
   ["vim-swap"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/vim-swap",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/vim-swap",
     url = "https://github.com/machakann/vim-swap"
   },
   ["vista.vim"] = {
@@ -220,13 +225,13 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/opt/vista.vim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/opt/vista.vim",
     url = "https://github.com/liuchengxu/vista.vim"
   },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
     loaded = true,
-    path = "/Users/leoaudibert/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    path = "/Users/laudibert/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
   }
 }
@@ -236,35 +241,35 @@ time([[Defining packer_plugins]], false)
 time([[Setup for committia.vim]], true)
 vim.cmd('packadd committia.vim')
 time([[Setup for committia.vim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('config.nvim-tree')
-time([[Config for nvim-tree.lua]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-require('impatient')
-time([[Config for impatient.nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+require('impatient')
+time([[Config for impatient.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config.nvim-tree')
+time([[Config for nvim-tree.lua]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Flog lua require("packer.load")({'vim-flog'}, { cmd = "Flog", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Vista lua require("packer.load")({'vista.vim'}, { cmd = "Vista", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Flog lua require("packer.load")({'vim-flog'}, { cmd = "Flog", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-pythonsense', 'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-pythonsense', 'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-swap', 'neoscroll.nvim', 'lualine.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'lualine.nvim', 'neoscroll.nvim', 'vim-swap'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

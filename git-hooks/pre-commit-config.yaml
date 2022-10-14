@@ -11,6 +11,9 @@
 #
 # If you don't want to add this file to your repo or `.gitignore`, add it to `.git/info/exclude`.
 #
+# When merging master into your branch, you may want to turn off this hook with `--no-verify`,;
+# otherwise, you will get plenty of errors from code you do not own.
+#
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
@@ -39,10 +42,10 @@ repos:
     hooks:
     - id: black
       additional_dependencies: [click==8.0.4]
--   repo: https://github.com/asottile/add-trailing-comma
-    rev: v2.3.0
-    hooks:
-    - id: add-trailing-comma
+        #-   repo: https://github.com/asottile/add-trailing-comma
+        #    rev: v2.3.0
+        #    hooks:
+        #    - id: add-trailing-comma
 -   repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 3.0.0  # or specific git tag
     hooks:

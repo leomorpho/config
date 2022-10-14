@@ -113,6 +113,8 @@ packer.startup {
 
         -- Better git log display
         use { "rbong/vim-flog", requires = "tpope/vim-fugitive", cmd = { "Flog" } }
+        -- GitHub extension for fugitive.vim
+        use "tpope/vim-rhubarb"
 
         -- Show git change (change, delete, add) signs in vim sign column
         use "lewis6991/gitsigns.nvim"

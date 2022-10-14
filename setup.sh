@@ -19,6 +19,9 @@ fi
 brew unlink neovim
 brew install --HEAD neovim
 brew install julia java php composer node wget tmux bat git-imerge vivid gnu-sed pre-commit
+# For C-Tags
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 # Install rust, used in some nvim plugins
 curl https://sh.rustup.rs -sSf | sh

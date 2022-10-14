@@ -74,6 +74,13 @@ keymap.set("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_w
 keymap.set("n", "<leader>sw", "<esc>:lua require('spectre').open_visual()<CR>")
 keymap.set("n", "<leader>sw", "viw:lua require('spectre').open_file_search()<cr>")
 
+-- Vim-fugitive
+keymap.set("n", "Gb", ":Git blame")
+
+-- Vista: Viewer & Finder for LSP symbols and tags
+keymap.set("n", "vv", ":Vista!!<cr>") -- Toggle Vista viewer
+
+--
 -- key_mapper({
 --     "nmap <silent> ga <Plug>(coc-codeaction-line)",
 --     "xmap <silent> ga <Plug>(coc-codeaction-selected)",
