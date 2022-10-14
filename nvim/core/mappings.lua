@@ -57,6 +57,8 @@ keymap.set("n", "<space>ff", ":FzfLua <cr>")
 keymap.set("n", "<space>f", ":FzfLua files<cr>")
 keymap.set("n", "<space>fg", ":FzfLua live_grep<cr>")
 keymap.set("n", "<space>fo", ":FzfLua oldfiles<cr>")
+keymap.set("n", "<space>fb", ":FzfLua buffers<cr>")
+keymap.set("n", "<space>ft", ":FzfLua tabs<cr>")
 
 -- Nvim-tree
 keymap.set("n", "<space>tt", ":NvimTreeFindFileToggle <cr>")
