@@ -97,10 +97,12 @@ alias zshrc="nvim ~/.zshrc"
 
 # Search and filesystem
 alias s="history | grep"
-alias tt="tree"
+alias tt="tree -CL 2"
 
 alias doc="nvim ~/.config/myconfig/README.md"
 alias h="history"
+
+alias tt="tree -CL 2"
 
 export LS_COLORS="$(vivid generate snazzy)"
 
