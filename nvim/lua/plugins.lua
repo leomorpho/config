@@ -34,7 +34,6 @@ packer.startup {
         use { "lewis6991/impatient.nvim", config = [[require('impatient')]] }
 
         use { "wbthomason/packer.nvim", opt = true }
-        
         use { 'neoclide/coc.nvim', branch = 'release'
           -- config = [[require('config.coc-nvim')]]
         }
@@ -45,7 +44,6 @@ packer.startup {
             -- optional for icon support
             requires = { 'kyazdani42/nvim-web-devicons' }
           }
-        
         -- use 'nvim-treesitter/nvim-treesitter'
 
         -- Python indent (follows the PEP8 style): A nicer Python indentation style for vim.
@@ -62,7 +60,6 @@ packer.startup {
 
         -- use { 'psf/black', branch = 'stable' }
         -- use 'brentyi/isort.vim'
-        
         use 'kyazdani42/nvim-web-devicons'
 
         use {
@@ -135,7 +132,7 @@ packer.startup {
             run = function() vim.fn['mkdp#util#install']() end,
             ft = {'markdown'},
         }
-
+        use 'git-time-metric/gtm-vim-plugin'
     end
 }
 
