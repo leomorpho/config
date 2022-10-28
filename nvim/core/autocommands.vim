@@ -102,3 +102,9 @@ augroup IsortMappings
     autocmd FileType python nnoremap <buffer> <Leader>si :Isort<CR>
     autocmd FileType python vnoremap <buffer> <Leader>si :Isort<CR>
 augroup END
+
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline 
+  au WinLeave * setlocal nocursorline
+augroup END

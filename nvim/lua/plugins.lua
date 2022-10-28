@@ -133,6 +133,7 @@ packer.startup {
             ft = {'markdown'},
         }
         use 'git-time-metric/gtm-vim-plugin'
+        use 'fladson/vim-kitty'
     end
 }
 
