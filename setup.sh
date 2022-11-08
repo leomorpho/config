@@ -107,3 +107,8 @@ brew install tmuxp
 # Starship Shell: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 # https://github.com/starship/starship
 curl -sS https://starship.rs/install.sh | sh
+
+# WTF util
+brew tap wtfutil/wtfutil
+brew install wtfutil
+ln -s ~/.config/myconfig/wtfutil/config.yml ~/.config/wtf/config.yml
