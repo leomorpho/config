@@ -32,7 +32,7 @@ for _, name in ipairs(core_conf_files) do
 	vim.cmd(source_cmd)
 end
 
-require'colorbuddy'.colorscheme('gloombuddy')
+require'colorbuddy'.colorscheme('snazzybuddy')
 
 require'nvim-web-devicons'.setup {
  -- your personnal icons can go here (to override)

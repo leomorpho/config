@@ -57,6 +57,9 @@ packer.startup {
           -- colorbuddy allows us to run the gloombuddy theme
         use 'tjdevries/colorbuddy.nvim'
         use 'bkegley/gloombuddy'
+        use 'tjdevries/gruvbuddy.nvim'
+        use 'lalitmee/cobalt2.nvim'
+        use 'bbenzikry/snazzybuddy.nvim'
 
         -- use { 'psf/black', branch = 'stable' }
         -- use 'brentyi/isort.vim'
