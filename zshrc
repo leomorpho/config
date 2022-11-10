@@ -109,6 +109,11 @@ export LS_COLORS="$(vivid generate snazzy)"
 # Work specific stuff, do not share so source local file
 source "/Users/laudibert/.zshrc_zenefits"
 
+# Zsh-z: Jump quickly to directories that you have visited "frecently." A native Zsh port of z.sh with added features.
+source ~/.config/myconfig/zsh-z/zsh-z.plugin.zsh
+autoload -U compinit && compinit
+zstyle ':completion:*' menu select
+
 eval "$(starship init zsh)"
 
 export EDITOR="nvim"
