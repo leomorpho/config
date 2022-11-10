@@ -172,5 +172,3 @@ set diffopt+=internal,indent-heuristic,algorithm:histogram
 set nowrap  " do no wrap
 set noruler
 
-" HACK: I can't find what set the relative line numbers...
-set nornu

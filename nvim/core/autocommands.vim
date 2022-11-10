@@ -70,6 +70,7 @@ function! s:handle_large_file() abort
     setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1
   else
     set eventignore-=all relativenumber
+  set nornu
   endif
 endfunction
 
