@@ -81,6 +81,8 @@ packer.startup {
 
         use "tweekmonster/django-plus.vim"
 
+        use 'fatih/vim-go'
+
         -- Displays a popup with possible keybindings of the command you started typing.
         -- Lua
         use {

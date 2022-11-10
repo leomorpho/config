@@ -158,22 +158,22 @@ endif
 
 " Save extensions here, they will be installed automatically on startup
 let g:coc_global_extensions = [
-      \'coc-markdownlint',
+      \'coc-ember',
+      \'coc-explorer',
       \'coc-highlight',
       \'coc-go',
       \'coc-golines',
-      \'coc-pyright',
-      \'coc-pydocstring',
-      \'coc-explorer',
-      \'coc-json', 
       \'coc-git',
+      \'coc-graphql',
+      \'coc-json', 
+      \'coc-markdownlint',
       \'coc-prettier',
-      \'coc-stylua',
-      \'coc-sh',
+      \'coc-pydocstring',
       \'coc-pyright',
+      \'coc-sh',
+      \'coc-stylua',
+      \'coc-symbol-line',
       \'coc-tsserver',
       \'coc-vimlsp',
-      \'coc-symbol-line',
-      \'coc-ember',
       \]
 
