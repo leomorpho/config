@@ -33,8 +33,8 @@ cargo install stylua --features lua53
 cargo install stylua --features lua54
 cargo install stylua --features luau
 
-ln -s "$CONFIG_PATH/nvim" "$HOME/.config/nvim"
-ln -s "$CONFIG_PATH/zshrc" "$HOME/.zshrc"
+ln -s -f "$CONFIG_PATH/nvim" "$HOME/.config/nvim"
+ln -s -f "$CONFIG_PATH/zshrc" "$HOME/.zshrc"
 
 # sharkdp/vivid: A themeable LS_COLORS generator with a rich filetype datebase
 brew install coreutils
