@@ -32,7 +32,6 @@ for _, name in ipairs(core_conf_files) do
 	vim.cmd(source_cmd)
 end
 
-require'colorbuddy'.colorscheme('snazzybuddy')
 
 require'nvim-web-devicons'.setup {
  -- your personnal icons can go here (to override)
@@ -53,9 +52,45 @@ require'nvim-web-devicons'.setup {
 
 vim.cmd 'set nornu'
 
--- Tentative: move to config. Some braces in JS/TS are illegible.
--- https://github.com/bbenzikry/snazzybuddy.nvim/blob/main/lua/snazzybuddy.lua
-local Color, colors, Group, groups, styles = require('colorbuddy').setup()
-local c = require('colorbuddy.color').colors
-Group.new('jsFuncBraces', c.red, c.none, no)
-Group.new('jsFuncArgs', c.purple, c.none, no)
+-- https://github.com/catppuccin/nvim
+vim.cmd.colorscheme "catppuccin"
+
+require("catppuccin").setup({
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = false,
+    term_colors = false,
+    dim_inactive = {
+        enabled = true,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        telescope = true,
+        treesitter = true,
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    },
+})
+

@@ -61,6 +61,9 @@ packer.startup {
         use 'lalitmee/cobalt2.nvim'
         use 'bbenzikry/snazzybuddy.nvim'
 
+        use { "catppuccin/nvim", as = "catppuccin" }
+
+
         -- use { 'psf/black', branch = 'stable' }
         -- use 'brentyi/isort.vim'
         use 'kyazdani42/nvim-web-devicons'
