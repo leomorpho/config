@@ -131,3 +131,13 @@ let g:vista#renderer#icons = {
 \   "variable": "\uf71b",
 \  }
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-go
+let g:go_fmt_command = "goimports"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-snazzy colorbuddy scheme
+let g:snazzybuddy_icons = v:true
+

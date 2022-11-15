@@ -53,3 +53,9 @@ require'nvim-web-devicons'.setup {
 
 vim.cmd 'set nornu'
 
+-- Tentative: move to config. Some braces in JS/TS are illegible.
+-- https://github.com/bbenzikry/snazzybuddy.nvim/blob/main/lua/snazzybuddy.lua
+local Color, colors, Group, groups, styles = require('colorbuddy').setup()
+local c = require('colorbuddy.color').colors
+Group.new('jsFuncBraces', c.red, c.none, no)
+Group.new('jsFuncArgs', c.purple, c.none, no)

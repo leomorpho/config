@@ -109,3 +109,10 @@ augroup CursorLine
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline 
   au WinLeave * setlocal nocursorline
 augroup END
+
+augroup SyntaxSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup END
+autocmd FileType javascript,typescript setlocal shiftwidth=2 softtabstop=2 expandtab
+
