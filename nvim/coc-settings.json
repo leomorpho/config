@@ -6,7 +6,7 @@
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": [],
   //"python.linting.flake8Enabled": true,
-  "python.linting.ruffEnabled": true,
+  "python.linting.pycodestyleArgs": ["--max-line-length=120"],
   "python.linting.pylamaEnabled": true,
   "python.sortImports.path": "/Library/Frameworks/Python.framework/Versions/3.9/bin/isort",
 
