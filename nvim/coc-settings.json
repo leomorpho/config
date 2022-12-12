@@ -1,5 +1,4 @@
 {
-  // https://github.com/fannheyward/coc-pyright
   "coc.preferences.formatOnType": false,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
 
@@ -16,13 +15,5 @@
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "pydocstring.formatter": "google",
-  //"languageserver": {
-  //  "graphql": {
-  //    "command": "graphql-lsp",
-  //    "args": ["server", "-m", "stream"],
-  //    // customize filetypes to your needs
-  //    "filetypes": ["typescript", "typescriptreact", "graphql"]
-  //  }
-  //},
   "git.enableGutters": true
 }

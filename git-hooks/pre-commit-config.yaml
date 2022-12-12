@@ -33,15 +33,16 @@ repos:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.10.1
-    hooks:
-      - id: isort
   - repo: https://github.com/psf/black
     rev: "refs/tags/22.1.0:refs/tags/22.1.0"
     hooks:
       - id: black
         additional_dependencies: [click==8.0.4]
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        args: ["--profile", "black", "--indent" , "    "]
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 3.0.0 # or specific git tag
     hooks:
