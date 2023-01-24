@@ -160,11 +160,11 @@ endif
 let g:coc_global_extensions = [
       \'coc-ember',
       \'coc-explorer',
+      \'coc-clangd',
       \'coc-highlight',
       \'coc-go',
       \'coc-golines',
       \'coc-git',
-      \'coc-graphql',
       \'coc-json', 
       \'coc-markdownlint',
       \'coc-prettier',
@@ -175,5 +175,7 @@ let g:coc_global_extensions = [
       \'coc-symbol-line',
       \'coc-tsserver',
       \'coc-vimlsp',
+      \'coc-html',
+      \'@yaegassy/coc-tailwindcss3',
       \]
 

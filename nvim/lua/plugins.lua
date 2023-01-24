@@ -142,6 +142,12 @@ packer.startup {
         }
         use 'git-time-metric/gtm-vim-plugin'
         use 'fladson/vim-kitty'
+
+        use 'othree/html5.vim'
+        use 'pangloss/vim-javascript'
+        use { 'evanleck/vim-svelte', branch='main' }
+
+        use 'norcalli/nvim-colorizer.lua'
     end
 }
 
